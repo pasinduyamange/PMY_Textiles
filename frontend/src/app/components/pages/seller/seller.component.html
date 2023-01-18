@@ -1,0 +1,35 @@
+<div class="sidebar">
+  <a class="active" href="/seller">Items</a>
+  <a href="/orderlist">Orders</a>
+  <a href="/quections">Questions</a>
+</div>
+<div class="content">
+
+  <Button routerLink="/additem" >Add New Item</Button>
+
+  <h1>All Items</h1>
+
+  <table id="items">
+    <tr>
+      <th>Item Id</th>
+      <th>Item Name</th>
+      <th>Item Price</th>
+      <th>Item Catagory</th>
+      <th>Item Countity</th>
+      <th>Edite item</th>
+    </tr>
+
+    <tr *ngFor="let item of items">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.catagory}}</td>
+      <td>{{item.countity}}</td>
+      <td><a routerLink="/item/{{item.id}}"><Button>edit</Button></a></td>
+    </tr>
+
+  </table>
+
+
+</div>
+
